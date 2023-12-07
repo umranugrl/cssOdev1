@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(245, 238, 200);
+    font-family:Arial, Helvetica, sans-serif;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 120px;
+}
+.navigation {
+    text-align: center;
+} 
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}  
+li {
+    margin: 0 10px;
+    font-size: 25px;    
+}
+li:hover {
+    color: #3498db; 
+    font-weight: bold;
+}
+.container {
+    text-align: center;
+}  
+.container img {
+    max-width: 100%;
+    height: 300px;
+    margin-bottom: 5px; /* Resmin altındaki metinler arasında boşluk bırakmak için */
+}
+  
+.container h2 {
+    margin-bottom: 5px; /* Başlık ile paragraflar arasında boşluk bırakmak için */
+}
+  
+.container p {
+    margin-bottom: 5px; /* Paragraflar arasında boşluk bırakmak için */
+}  
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarif {
+    width: calc(33.33% - 20px); /* Tarif kutularının genişliği (margin dahil) */
+    margin: 10px; /* Tarif kutuları arasındaki boşluk */
+    box-sizing: border-box; /* Kutu modelini kullanarak genişlik ve yükseklik ayarlamalarını daha iyi kontrol etmek için */
+}
+  
+.tarif img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* Resmin boyutlarını koruyarak kesme yapar */
+}
+  
+  /* İlk üç tarifin yan yana gelmesi için */
+.tarif:nth-child(3n + 1) {
+    clear: left;
+}  
