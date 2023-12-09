@@ -11,33 +11,33 @@ body{
 .navigation {
     text-align: center;
 } 
-ul {
+.navigation ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
 }  
-li {
+.navigation li {
     margin: 0 10px;
     font-size: 25px;    
 }
-li:hover {
+.navigation li:hover {
     color: #3498db; 
     font-weight: bold;
 }
 .container {
     text-align: center;
+    justify-content: center;
 }  
 .container img {
     max-width: 100%;
     height: 300px;
     margin-bottom: 5px; /* Resmin altındaki metinler arasında boşluk bırakmak için */
-}
-  
+} 
 .container h2 {
     margin-bottom: 5px; /* Başlık ile paragraflar arasında boşluk bırakmak için */
 }
-  
+ 
 .container p {
     margin-bottom: 5px; /* Paragraflar arasında boşluk bırakmak için */
 }  
@@ -46,21 +46,59 @@ li:hover {
     flex-wrap: wrap;
     justify-content: center;
 }
-.tarif {
-    width: calc(33.33% - 20px); /* Tarif kutularının genişliği (margin dahil) */
+.content .tarif {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 0 0 calc(33.33% - 25px); /* Tarif kutularının genişliği (margin dahil) */
     margin: 10px; /* Tarif kutuları arasındaki boşluk */
     box-sizing: border-box; /* Kutu modelini kullanarak genişlik ve yükseklik ayarlamalarını daha iyi kontrol etmek için */
 }
-  
-.tarif img {
-    max-width: 100%;
-    height: auto;
-    width: 300px;
-    height: 300px;
+.content .tarif img {
+    width: 300px; /* Resmin genişliği */
+    height: 300px; /* Resmin yüksekliği */
     object-fit: cover; /* Resmin boyutlarını koruyarak kesme yapar */
 }
-  
-  /* İlk üç tarifin yan yana gelmesi için */
-.tarif:nth-child(3n + 1) {
+/* İlk üç tarifin yan yana gelmesi için */
+.content .tarif:nth-child(3n + 1) {
     clear: left;
+} 
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
 }  
+.cont-ent {
+    display: flex;
+    justify-content: center;
+}
+  
+.cont-ent .tarif {
+    width: 40%;
+    display: flex;
+    flex-direction: column; /* İçeriği dikey olarak sıralama */
+    align-items: center; /* İçeriği ortala */
+    text-align: left; /* Metni sola hizala */
+    margin: 20px; /* Uygun bir kenar boşluğu ekleyebilirsiniz */
+}
+  
+.cont-ent  .tarif img {
+    width: 100%; /* Resmin genişliğini tamamen dolduracak şekilde ayarlama */
+    height: auto;
+    object-fit: cover;
+}
+  
+.cont-ent ul, ol {
+    padding-left: 20px; /* Sırasıyla liste ve numaralı liste için sol boşluk ekleme */
+}
+ 
+.cont-ent th {
+    font-size: 1.2em;
+    color: #333; /* Liste başlıkları için renk */
+}
+ 
+.cont-ent ul th, ol th {
+    font-size: 1.2em;
+    color: #333;
+} 
