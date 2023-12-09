@@ -18,11 +18,6 @@ git clone https://github.com/umranugrl/cssOdev1.git
 
 Projeyi cloneladıktan sonra Visual Studio Code programında açınız.
 
-Linux için:
-```linux
-cd kodluyoruzilkrepo
-code.
-```
 
 ## License
 
